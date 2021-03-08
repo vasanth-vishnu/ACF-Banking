@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ 
+    <link rel="stylesheet" href="in31.css">
+</head>
+<body>
+<div class="containe">
+  <div class="head">
+    <h2 class="m1"><span style="color: rgb(255, 255, 0);">A</span><span style="color: rgb(255, 255, 0); opacity: 0.6;">ssurance </span><span style="color: rgb(0, 174, 255);">C</span><span style="color: rgb(0, 174, 255);opacity: 0.6;">onsistency </span><span style="color: rgb(255, 80, 80);">F</span><span style="color: rgb(255, 158, 158); opacity: 0.6;">ranchisee</span>
+        <span style="color: white;">B</span><span style="color:white;opacity: 0.6;">anking</span></h2>
+    <p style="font-weight: bolder; color: tomato;">transfer your money</p>
+  </div>
+  <div class="scro">
+    <marquee scrollamount="2" direction="up" height="25px">
+      <div class="ct"><p>Created by <span style="color: rgb(229, 255, 208);">Vasanth</span></p></div>
+      </marquee>
+  </div>
+  <a href="/home" class="ab btn btn-sm btn-hover" style="background-color: rgba(7, 153, 153, 0.733); color:white;font-weight: 500;">Home</a>
+  <a href="/Alltransactions" class="ab btn btn-sm btn-hover" style="background-color: rgba(7, 153, 153, 0.733); color:white;font-weight: 500;">View transactions</a>
+  <a href="/accounts" class="ab btn btn-sm btn-hover" style="background-color: rgba(7, 153, 153, 0.733); color:white;font-weight: 500;">View accountholders</a>
+  <div class="fo">
+      <div class="tit">
+          <h3><span style="color:teal">M</span><span style="color: teal; opacity: 0.6;">oney </span><span style="color:teal">T</span><span style="color: teal; opacity: 0.6;">ransfer : </span><span style="color: tomato;"><%= fr.Name %></span></h3>
+      </div>
+    <form action="/trans1" method="POST">
+      <div class="fmd">
+        <h5 class="h5h">Account details : <span><%= fr.Name %></span></h5>
+      </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Name</label>
+            <input type="text" class="form-control" name="fromuser" value="<%= fr.Name %>" id="inputEmail4" placeholder="Email" readonly>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">AccountNo</label>
+            <input type="text" class="form-control" value="<%= fr.Accountno %>" id="inputPassword4" placeholder="Password" readonly>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" value="<%= fr.Email %>" id="inputEmail4" placeholder="Email" readonly>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">AccountBalance</label>
+              <input type="text" class="form-control" value="<%= fr.CurrentBal %> ₹" id="inputPassword4" placeholder="Password" readonly>
+            </div>
+          </div>
+          <div class="fmd">
+            <h5 class="h5h">Transfer money</span></h5>
+          </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Amount ₹</label>
+              <input type="text" pattern="[1-9][0-9]{1,10}" name="amount" oninvalid="this.setCustomValidity('please enter the numbers above 0 only')"
+              oninput="this.setCustomValidity('')" class="form-control" id="inputEmail4" placeholder="enter your amount" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputState">To</label>
+                <select id="inputState" name="touser" class="form-control" required>
+                    <option selected>Choose...</option>
+                    <% for(let i=0;i<dat.length;i++) { %>
+                        <% if(dat[i].Name!=fr.Name) { %>
+                    <option><%= dat[i].Name %></option>
+                    <% } %>
+                    <% } %>
+                </select>
+            </div>
+          </div>
+          <div class="ntb">
+            <button type="submit" class="by btn btn-sm btn-hover">Transfer</button>
+          </div>
+       
+      </form>
+  </div>
+  <hr style="height: 2px;background-color: white;">
+  <div class="ftco">
+    <p style="color: white; "><span style="color: rgb(255, 255, 0);font-size: 40px;">A</span><span style="color: rgb(0, 138, 180);font-size: 40px;">C</span><span style="color: rgb(255, 80, 80);font-size: 40px;">F </span> Banking is so secure that we provide additional information about the future benifits and make customers so trustable and mainly people with lots of money will need security for their money and they can blindly
+      trust us Because we provide security like a girl!!
+    </p>
+  </div>
+  <hr style="height: 2px;background-color: white;">
+  <div class="med-i">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+  </div>
+</div>
+</body>
+</html>

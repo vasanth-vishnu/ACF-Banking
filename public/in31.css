@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    background-image:url("v2u.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.head{
+    text-align: center;
+    background-color: rgba(0, 83, 83, 0.733);
+}
+.containe{
+padding:5px 100px;
+background: transparent;
+margin-bottom: 113px;
+}
+.fo{
+    background-color: white;
+    width: 100%;
+    padding: 50px;
+}
+.med-i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+.med-i a{
+    
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    transition: 0.3s;
+}
+.med-i a:not(:last-child){
+    margin-right: 60px;
+}
+.med-i a:hover{
+    transform: scale(1.3);
+}
+.bt{
+    background-color: rgba(7, 153, 153, 0.733);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border:none;
+    padding: 8px 17px;
+    border-radius: 6px;
+    transition: 0.3s;
+    transition-property: background;
+}
+.bt:hover{
+    background-color: rgba(5, 105, 105, 0.733);
+}
+.ntb{
+    text-align: center;
+}
+.tit{
+    text-align: center;
+    margin-bottom: 45px;
+}
+label{
+    font-weight: 600;
+    color:teal;
+}
+.h5h{
+    font-weight: 600; color: rgb(1, 88, 88); font-size: 25px;
+}
+.by{
+    background-color: rgba(7, 153, 153, 0.733); color:white;font-weight: 500;
+}
+.scro{
+    text-align: center;
+    background-color: teal;
+    position: relative;
+    top:-15px;
+    height: 30px;
+}
+.ct{
+    text-align: right;
+    width: 100%;
+    padding-right: 20px;
+    color: white;
+    font-weight: 500;
+}
+@media (max-width:630px){
+    .m1{
+        font-size: 35px;
+    }
+    .containe{
+        width: 710px;
+        margin: 10px -25px 40px -25px;
+        margin-left: 1px;
+
+    }
+    .ab{
+        font-size: 16px;
+       position: relative;
+       top: 30px;
+    }
+    .fo{
+        font-size: 25px;
+        position: relative;
+        top:30px;
+    }
+    .h5h{
+        font-size: 40px;
+        color: tomato;
+    }
+    .input{
+        font-size: 25px;
+    }
+    .by{
+        font-size: 30px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+    .ct{
+        text-align: center;
+        font-size: 20px;
+    }
+}
