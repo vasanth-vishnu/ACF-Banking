@@ -55,7 +55,7 @@ app.post('/trans1',(req,res)=>{
     let month=d.getMonth()+1;
     let year=d.getFullYear();
     let fin=day+"-"+month+"-"+year;
-    let myDate = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+    let myDate = d.toTimeString();
      
     tr.create({
         From:frn,

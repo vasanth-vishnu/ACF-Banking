@@ -199,6 +199,7 @@ label{
     .base .content p{
         font-size: 13px;
     }
+   
 }
 @media (max-width:560px){
   
@@ -218,7 +219,8 @@ label{
 }
 @media (max-width:460px){
     .fas{
-        font-size: 15px;
+        font-size: 27px;
+        
     }
     .base{
         margin: 45px 40px;
@@ -227,22 +229,24 @@ label{
         padding: 15px 40px;
     }
     header .logo{
-        font-size: 20px;
+        font-size: 35px;
+        position: relative;
+        top:15px;
     }
     .base .content h2{
-        font-size: 24px;
-        line-height: 27px;
+        font-size: 34px;
+        line-height: 37px;
         
     }
     .base .content h2 span{
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 600;
     }
     .base .content p{
-        font-size: 13px;
+        font-size: 17px;
     }
     .base .info-btn{
-        font-size: 15px;
+        font-size: 20px;
         background-color: teal;
         color: white;
         text-decoration: none;
@@ -258,4 +262,9 @@ label{
     .sm{
         text-align: center;
     }
+    .ftco{
+        margin: 0 1px;
+        font-size: 20px;
+    }
+  
 }

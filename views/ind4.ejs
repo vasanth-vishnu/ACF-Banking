@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ACF/Transaction-History</title>
    
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,7 +54,7 @@
             <td class="rwn"><%= data[i].From %></td>
             <td><%= data[i].To %></td>
             <td style="font-family:Arial, Helvetica, sans-serif;"><%= data[i].Amount %> ₹</td>
-            <td><%= data[i].Time %></td>
+            <td><%= data[i].Time.substring(0,8) %></td>
             <td><%= data[i].Date %></td>
             <td>
               <a href="/accounts" class="btn btn-sm btn-hover" style="background-color: rgba(7, 153, 153, 0.733); color:white;font-weight: 500;">check balance</a>
