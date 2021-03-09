@@ -4,19 +4,22 @@ const mongoose=require('mongoose');
 const bodyParser=require('body-parser');
 const dbURI='mongodb+srv://vasanth:Vasanth890@node1.nuiqe.mongodb.net/nodesa?retryWrites=true&w=majority';
 const {compile}=require('ejs');
+const favicon=require('serve-favicon');
 var session = require('express-session');
 app.use(session({secret: 'mySecret', resave: false, saveUninitialized: false}));
 const port=process.env.PORT || 2000
 app.get('/home',(req,res)=>{
     res.render('index')
 });
-
+app.get('/',(req,res)=>{
+    res.redirect('/home');
+})
 app.use(bodyParser.urlencoded({extended:false})); 
 const accB=require('./models/account');
 const tr=require('./models/transfer1');
 app.set('view engine','ejs');
 app.use(express.static('public'));
-
+app.use("/favicon.ico", express.static('public/favicon.ico'));
 app.get('/accounts',(req,res)=>{
     accB.find().then((result)=>{res.render("ind2",{data:result});console.log("data sent")}).catch((err)=>console.log(err));
 })
