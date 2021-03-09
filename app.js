@@ -49,14 +49,10 @@ app.get('/Alltransactions',(req,res)=>{
 app.post('/trans1',(req,res)=>{
     let frn=req.body.fromuser;
     let am=req.body.amount;
+    let date=new Date().toLocaleString("en-US",{timeZone:'Asia/Kolkata'})
     let tou=req.body.touser;
-    let d= new Date();
-    let day=d.getDate();
-    let month=d.getMonth()+1;
-    let year=d.getFullYear();
-    let fin=day+"-"+month+"-"+year;
-    let myDate = d.toLocaleTimeString();
-     
+    let fin=date.substring(0,8)
+    let myDate = date.substring(9,date.length);
     tr.create({
         From:frn,
         To:tou,
