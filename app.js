@@ -54,8 +54,9 @@ app.post('/trans1',(req,res)=>{
     let am=req.body.amount;
     let date=new Date().toLocaleString("en-US",{timeZone:'Asia/Kolkata'})
     let tou=req.body.touser;
-    let fin=date.substring(0,8)
-    let myDate = date.substring(9,date.length);
+    let fin=date.substring(0,9)
+    let myDate = date.substring(10,date.length);
+    console.log(fin,myDate);
     tr.create({
         From:frn,
         To:tou,
